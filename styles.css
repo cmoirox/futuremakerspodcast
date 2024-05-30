@@ -1,0 +1,659 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'SaansTRIAL-Bold';
+    src: url('fonts/SaansTRIAL-Bold.woff2') format('woff2'),
+         url('fonts/SaansTRIAL-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body { 
+    font-family: 'SaansTRIAL-Bold', sans-serif;
+    padding: 0; 
+    overflow-x: hidden; /* Cache le scroll horizontal */
+    display: flex;
+    flex-direction: column; /* Organise le contenu du body en colonne */
+    background-color: #ededed;
+}
+
+.container-header { 
+    width: 100%; 
+    background: #ededed; 
+    color: #089ed0; 
+    padding-top: 7px; 
+    min-height: 70px; 
+    border-bottom: #ededed 0px solid; 
+}
+
+header h1, header p { 
+    margin-left: 20px;
+    font-size: 1em;
+    font-weight: 800; 
+    text-align: left;
+}
+
+header h1 {
+    margin-bottom: 3px; /* Ajustez cette valeur pour réduire la marge entre le h1 et le p */
+}
+
+footer {
+    position: fixed; /* Le footer reste à la même position même lors du scroll */
+    bottom: 0; /* Le footer est positionné tout en bas de la page */
+    width: 100%;
+    display: flex; /* Active Flexbox pour le conteneur footer */
+    justify-content: space-around; /* Répartit l'espace autour des éléments pour qu'ils s'étendent uniformément */
+    align-items: center; /* Centre les éléments verticalement */
+    text-align: center; /* Centre le texte de chaque élément */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si l'écran est trop petit */
+    background-color: #ffffff;
+    z-index: 999;
+    /*border-top: 2.5px solid #090909;*/
+}
+
+footer p {
+    margin: 0 10px; /* Réduit la marge autour des paragraphes pour les rapprocher */
+    font-size: 0.9em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    word-spacing: normal;
+}
+
+.ecole-estienne {
+    margin: 0 10px; /* Réduit la marge autour des paragraphes pour les rapprocher */
+    color: #090909;
+    margin-top: 20px;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    word-spacing: normal;
+}
+
+.rapport-stage {
+    margin: 0 10px; /* Réduit la marge autour des paragraphes pour les rapprocher */
+    color: #090909;
+    margin-top: 20px;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    word-spacing: normal;
+}
+
+footer p a {
+    color: #090909; /* Définit la couleur initiale des liens */
+    text-decoration: none; /* Les liens ne sont pas soulignés par défaut */
+}
+
+footer p a:hover, footer p a:active {
+    color: #3d0dd1; /* Change la couleur au survol et au clic, couleur caractéristique de Linkedin */
+}
+
+.logo-container {
+  display: flex;
+  align-items: left;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-container video {
+  height: 35%;
+  width: 35%;
+  margin-top: 10px;
+  margin-left: 28px;
+  margin-bottom: -5%;
+}
+
+.container-main {
+    float: left; /* Floats left to align side by side */
+    width: 50%; /* Adjusts the width to take half of the container */
+    margin-top: 20px; /* Ajustez cette valeur selon l'espace désiré au-dessus du texte */
+    margin-bottom: 80px; 
+    min-height: 330px;
+}
+
+.container-main p {
+    margin-left: 20px; 
+    line-height: 1.2; 
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.titre {
+    position: absolute;
+    color: #090909;
+    font-size: 2.5em;
+    word-spacing: normal;
+    margin-top: 9%;
+    margin-left: 5%;
+    z-index: 999;
+}
+
+.sous-titre {
+    position: absolute;
+    margin-top: 23%;
+    margin-left: 6%;
+    color: #090909;
+    font-size: 0.6em;
+    word-spacing: normal;
+    z-index: 999;
+}
+
+.wave-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-left: 0%; /* Ajouter cette ligne */
+}
+
+.wave {
+  position: relative;
+  height: 100px; /* Ajuster cette valeur pour définir la hauteur de la vidéo */
+  width: 100vw; /* Ajuster cette valeur pour définir la largeur de la vidéo */
+  margin-top: -80%; /* Ajuster cette valeur pour positionner la vague verticalement */
+  z-index: -1;
+  display: flex; /* Affiche la vidéo comme un élément flexible */
+  align-items: center; /* Centre la vidéo verticalement */
+  justify-content: center; /* Centre la vidéo horizontalement */
+}
+
+.wave-video {
+  height: 1800%; /* Ajuster cette valeur pour définir la hauteur de la vidéo */
+  width: 1800%; /* Ajuster cette valeur pour définir la largeur de la vidéo */
+}
+
+  .bouton1 {
+    width: 9.5%; /* modifiez la largeur du SVG */
+    height: auto; /* modifiez la hauteur du SVG */
+    display: block; /* centre le SVG dans la balise div */
+    margin-top: 5%;
+    margin-left: 10%;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  .bouton-color1 {
+    fill: white /* modifiez la couleur de remplissage du SVG */
+  }
+
+  .bouton2 {
+    width: 9.5%; /* modifiez la largeur du SVG */
+    height: auto; /* modifiez la hauteur du SVG */
+    display: block; /* centre le SVG dans la balise div */
+    margin-top: 5%;
+    margin-left: 10%;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  .bouton-color2 {
+    fill: white /* modifiez la couleur de remplissage du SVG */
+  }
+
+  .bouton3 {
+    width: 9.5%; /* modifiez la largeur du SVG */
+    height: auto; /* modifiez la hauteur du SVG */
+    display: block; /* centre le SVG dans la balise div */
+    margin-top: 5%;
+    margin-left: 120.5%;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  .bouton-color3 {
+    fill: white /* modifiez la couleur de remplissage du SVG */
+  }
+
+  .pressed {
+    transform: scale(0.95); /* Réduit légèrement la taille du bouton pour donner un effet de pression */
+    box-shadow: 0 1px 2px rgba(255, 255, 255, 0);
+  }
+
+  .pressed2 {
+    transform: scale(0.95); /* Réduit légèrement la taille du bouton pour donner un effet de pression */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0);
+  }
+
+  .pressed3 {
+    transform: scale(0.95); /* Réduit légèrement la taille du bouton pour donner un effet de pression */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0);
+  }
+
+  #soundWaveContainer {
+    position: relative;
+    width:700%;
+    height: 20px;
+    margin-top: -27px;
+    margin-left: 37px;
+    overflow: hidden;
+    align-items: center;
+    z-index: 999;
+    justify-content: center;
+    display: block;
+  }
+  
+  #soundWave {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    width: 40000%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, transparent 75%, transparent);
+    background-size: 13px 100%; /* Ajustez la largeur des traits ici */
+    z-index: 999;
+    opacity: 100%;
+    animation: move 100s infinite linear paused;
+  }
+
+  .animate {
+    animation-play-state: running;
+  }
+  
+
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  } 
+  
+  #soundWaveContainer2 {
+    position: relative;
+    width:700%;
+    height: 20px;
+    margin-top: -27px;
+    margin-left: 37px;
+    overflow: hidden;
+    align-items: center;
+    z-index: 999;
+    justify-content: center;
+    display: block;
+  }
+  
+  #soundWave2 {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    width: 40000%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, transparent 75%, transparent);
+    background-size: 13px 100%; /* Ajustez la largeur des traits ici */
+    z-index: 999;
+    opacity: 100%;
+    animation: move 100s infinite linear paused;
+  }
+
+  .animate {
+    animation-play-state: running;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }  
+
+  #soundWaveContainer3 {
+    position: relative;
+    width:700%;
+    height: 20px;
+    margin-top: -27px;
+    margin-left: 37px;
+    overflow: hidden;
+    align-items: center;
+    z-index: 999;
+    justify-content: center;
+    display: block;
+  }
+  
+  #soundWave3 {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    width: 40000%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, transparent 75%, transparent);
+    background-size: 13px 100%; /* Ajustez la largeur des traits ici */
+    z-index: 999;
+    opacity: 100%;
+    animation: move 100s infinite linear paused;
+  }
+
+  .animate {
+    animation-play-state: running;
+  }
+  
+
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }  
+  
+  
+  .wave svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 100%;
+  }
+  
+
+.container-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajuste la hauteur à 100% de la hauteur de la fenêtre */
+    z-index: 1;
+  }
+  
+
+  .module {
+    margin: 0 auto;
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+  }
+  
+  
+  .carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  .carousel div {
+    transform-style: preserve-3d;
+    
+  }
+
+  .avatar1 {
+    width: 47%;
+    height: auto;
+    position: relative;
+    z-index: 999;
+    left: 27%;
+    margin-top: 16%;
+  }
+
+  .avatar2 {
+    width: 47%;
+    height: auto;
+    position: relative;
+    z-index: 999;
+    left: 27%;
+    margin-top: 13%;
+  }
+
+  .avatar3 {
+    width: 47%;
+    height: auto;
+    position: relative;
+    z-index: 999;
+    left: 138%;
+    margin-top: -27%;
+  }
+
+  .titre-carte {
+    position: relative;
+    margin-top: 5%;
+    margin-left: 4.5%;
+    color: white;
+    font-size: 0.5em;
+    word-spacing: normal;
+}
+
+  .soustitre-carte {
+    position: relative;
+    margin-top: 7%;
+    margin-left: 5%;
+    color: white;
+    font-size: 0.32em;
+    font-weight: 10%;
+    word-spacing: normal;
+}
+
+#audioTimer {
+  font-size: 0.6em; /* Taille de la police du timer */
+  color: white; /* Couleur de la police du timer */
+  margin-top: 30%;
+  margin-left: 610%;
+  white-space: nowrap;
+}
+
+  .titre-carte2 {
+    position: relative;
+    margin-top: 5%;
+    margin-left: 4.5%;
+    color: white;
+    font-size: 0.5em;
+    word-spacing: normal;
+}
+
+.soustitre-carte2 {
+    position: relative;
+    margin-top: 7%;
+    margin-left: 5%;
+    color: white;
+    font-size: 0.32em;
+    font-weight: 10%;
+    word-spacing: normal;
+}
+
+#audioTimer2 {
+  font-size: 0.6em; /* Taille de la police du timer */
+  color: white; /* Couleur de la police du timer */
+  margin-top: 30%;
+  margin-left: 610%;
+  white-space: nowrap;
+}
+
+.titre-carte3 {
+    position: relative;
+    display: block;
+    margin-top: 5%;
+    margin-left: 115.5%;
+    color: white;
+    font-size: 0.5em;
+    word-spacing: normal;
+    width: 100%;
+}
+
+.soustitre-carte3 {
+    position: relative;
+    margin-top: 7%;
+    margin-left: 116%;
+    color: white;
+    font-size: 0.32em;
+    font-weight: 10%;
+    word-spacing: normal;
+    width: 100%;
+}
+
+#audioTimer3 {
+  font-size: 0.6em; /* Taille de la police du timer */
+  color: white; /* Couleur de la police du timer */
+  margin-top: 30%;
+  margin-left: 610%;
+  white-space: nowrap;
+}
+
+  
+  .item1 {
+    display: block;
+    position: absolute;
+    left: -0.7%;
+    top: 7%;
+    background: #090909;
+    width: 300px;
+    height: 370px;
+    line-height: 200px;
+    font-size: 5em;
+    text-align: center;
+    color: #FFF;
+    opacity: 0.97;
+    border-radius: 30px;
+    transition: transform 1s;
+  }
+
+  .item2 {
+    display: block;
+    position: absolute;
+    left: -0.7%;
+    top: 2%;
+    background: #090909;
+    width: 300px;
+    height: 370px;
+    line-height: 200px;
+    font-size: 5em;
+    text-align: center;
+    color: #FFF;
+    opacity: 0.97;
+    border-radius: 30px;
+    transition: transform 1s;
+  }
+
+  .item3 {
+    display: block;
+    position: absolute;
+    left: 110%;
+    top: -50%;
+    background: #090909;
+    width: 300px;
+    height: 370px;
+    line-height: 200px;
+    font-size: 5em;
+    text-align: center;
+    color: #FFF;
+    opacity: 0.97;
+    border-radius: 30px;
+    transition: transform 1s;
+  }
+  
+  .a {
+    transform: rotateY(0deg) translateZ(300px);
+  }
+  .a .item1 {
+    background: rgba(61, 13, 209, 0.15); /* Changez l'opacité pour plus ou moins de transparence, mais conservez la couleur d'origine */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre portée pour plus de profondeur */
+    backdrop-filter: blur(10px); /* Floutez l'arrière-plan */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Ajoutez une bordure légèrement visible */
+}
+
+  .b {
+    transform: rotateY(120deg) translateZ(300px);
+  }
+  .b .item2 {
+    background: rgba(151, 113, 242, 0.15); /* Changez l'opacité pour plus ou moins de transparence, mais conservez la couleur d'origine */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre portée pour plus de profondeur */
+    backdrop-filter: blur(10px); /* Floutez l'arrière-plan */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Ajoutez une bordure légèrement visible */
+  }
+  .c {
+    transform: rotateY(120deg) translateZ(420px);
+  } 
+  .c .item3 {
+    background: rgba(8, 158, 208, 0.15); /* Changez l'opacité pour plus ou moins de transparence, mais conservez la couleur d'origine */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoutez une ombre portée pour plus de profondeur */
+    backdrop-filter: blur(10px); /* Floutez l'arrière-plan */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Ajoutez une bordure légèrement visible */
+  }
+  
+  .next, .prev {
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    top: 194%;
+    padding: 0.20em 1.5em; /* Adjusted the padding */
+    cursor: pointer;
+    background: rgba(8, 158, 208, 0.25);
+    border-radius: 40px; /* Changed the border-radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: box-shadow 0.1s, top 0.1s;
+  }
+  
+
+.next {
+  left: 75%; /* Modifiez cette ligne */
+  margin-left: 1em; /* Ajoutez cette ligne */
+}
+
+.prev {
+  right: 75%; /* Modifiez cette ligne */
+  margin-left: 1em; /* Ajoutez cette ligne */
+}
+
+.next:active, .prev:active {
+    top: 195%;
+    box-shadow: 0 1px 0 #089ed0;
+  }  
+
+.container-main2 {
+    float: left; /* Floats left to align side by side */
+    width: 100%; /* Adjusts the width to take half of the container */
+    margin-top: 50%; /* Ajustez cette valeur selon l'espace désiré au-dessus du texte */
+    margin-bottom: 50%; 
+    min-height: 330px;
+}
+
+.container-main2 p {
+    margin-left: 20px; 
+    line-height: 1.2; 
+    font-size: 2em;
+}
+
+.texte1 {
+    color: #090909;
+    font-size: 2.5em;
+    word-spacing: normal;
+    margin-top: 80%;
+    opacity: 0%;
+}
+
+.texte2 {
+    margin-top: 1px;
+    color: #090909;
+    font-size: 0.6em;
+    word-spacing: normal;
+    opacity: 0%;
+}
+
+.cadre {
+  position: absolute;
+  padding: 30px; /* Ajoute de l'espace à l'intérieur du cadre */
+  margin: 20px auto; /* Centrage et espace autour du cadre */
+  height: 50%;
+  width: 70%; /* Contrôle de la largeur du cadre */
+  margin-top: 8%;
+  margin-left: 3.9%;
+  border-radius: 30px;
+  background: white; /* Changez l'opacité pour plus ou moins de transparence, mais conservez la couleur d'origine */
+  z-index: 1;
+}
+
